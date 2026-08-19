@@ -1,0 +1,23 @@
+# Cloudflare Workers config for the Mailbun site.
+#
+# This is an assets-only Worker: there's no `main` script, so Cloudflare just
+# serves the files in `directory` straight from its edge. Nothing here runs
+# server-side code, so it stays on the free tier's static-asset allowance
+# rather than burning Worker requests.
+#
+# Deploy with:  npx wrangler deploy
+name = "mailbun-site"
+compatibility_date = "2026-08-18"
+
+[assets]
+# The site lives at the repo root, so everything not listed in .assetsignore
+# gets uploaded. If you ever add a build step, point this at the output dir
+# instead and delete .assetsignore.
+directory = "."
+
+# Custom domain. Uncomment and set your hostname once the nameservers are
+# live at Cloudflare — with custom_domain = true Wrangler creates the DNS
+# record and the certificate for you, so don't also add an A/CNAME by hand.
+# [[routes]]
+# pattern = "mailbun.yourdomain.com"
+# custom_domain = true

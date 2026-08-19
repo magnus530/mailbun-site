@@ -1,0 +1,40 @@
+<!--
+  Mailbun icon — copied verbatim from the app repo's master build/icon.svg.
+  Do not edit here: change it in mailclient/build/icon.svg, run `npm run icons`
+  there, then re-copy this file and regenerate logo.png / logo-512.png with
+  `rsvg-convert -w 256 -h 256 assets/logo.svg -o assets/logo.png` (and -w 512).
+
+  Drawn on a 512 grid, tuned for legibility at favicon sizes:
+
+  - Flat #2563eb fill, no gradient. A vertical gradient puts mid-tones behind
+    the flap stroke, which softens the one edge doing the most work at 16px.
+  - The flap is a stroke in the *exact* background colour rather than a filled
+    triangle. A filled flap merges into the background where it meets the
+    envelope's top edge; a stroke keeps a clean white margin on both sides.
+  - Generous body (368x260 of 512) and a tight 18px corner radius, so more of
+    the 16px raster lands on the glyph and its edges stay square.
+  - The flap descends only ~34% of the body height. Deeper looks better at
+    1024 but leaves too few white pixels under the crease at 16px, where the
+    whole envelope is under 8px tall.
+
+  If you change the fill, change it in BOTH places below — SVG has no variables
+  and the flap stroke must match the background exactly or it will show a seam.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Keeps the flap stroke from spilling past the envelope's rounded corners. -->
+    <clipPath id="body">
+      <rect x="72" y="126" width="368" height="260" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <rect width="512" height="512" rx="114" fill="#2563eb"/>
+
+  <rect x="72" y="126" width="368" height="260" rx="18" fill="#ffffff"/>
+
+  <g clip-path="url(#body)">
+    <path d="M72 126 L256 214 L440 126"
+          fill="none" stroke="#2563eb" stroke-width="22"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

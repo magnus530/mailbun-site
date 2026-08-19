@@ -1,0 +1,9 @@
+# Same syntax as .gitignore — anything matched here is NOT uploaded or served.
+# Without this, `directory = "."` would happily publish the config files too.
+wrangler.toml
+.assetsignore
+node_modules
+package.json
+package-lock.json
+.git
+.wrangler
