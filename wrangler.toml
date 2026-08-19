@@ -18,9 +18,15 @@ compatibility_date = "2026-08-18"
 # instead and delete .assetsignore.
 directory = "."
 
-# Custom domain. Uncomment and set your hostname once the nameservers are
-# live at Cloudflare — with custom_domain = true Wrangler creates the DNS
-# record and the certificate for you, so don't also add an A/CNAME by hand.
-# [[routes]]
-# pattern = "mailbun.yourdomain.com"
-# custom_domain = true
+# Custom domains. custom_domain = true means Cloudflare owns the DNS record
+# and the certificate for these hostnames — so the zone must NOT contain an
+# A/AAAA/CNAME for them, or the deploy fails with "already has externally
+# managed DNS records". The MX and SPF TXT records for email forwarding are
+# unaffected and must stay.
+[[routes]]
+pattern = "mailbun.org"
+custom_domain = true
+
+[[routes]]
+pattern = "www.mailbun.org"
+custom_domain = true
