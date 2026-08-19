@@ -5,8 +5,11 @@
 # server-side code, so it stays on the free tier's static-asset allowance
 # rather than burning Worker requests.
 #
-# Deploy with:  npx wrangler deploy
-name = "mailbun-site"
+# Deploys run automatically via Workers Builds on push to main. To deploy
+# by hand from this directory instead:  npx wrangler deploy
+# Must match the Worker name in the Cloudflare dashboard, or Workers Builds
+# flags the mismatch and opens a PR to correct it.
+name = "mailbun"
 compatibility_date = "2026-08-18"
 
 [assets]
