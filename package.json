@@ -1,0 +1,12 @@
+{
+  "name": "mailbun-site",
+  "private": true,
+  "description": "Static marketing site for Mailbun, deployed as an assets-only Cloudflare Worker.",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.86.0"
+  }
+}
