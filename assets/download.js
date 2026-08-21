@@ -22,12 +22,12 @@
 */
 
 var RELEASE = {
-  version: '0.1.1',
-  base: 'https://github.com/magnus530/mailbun/releases/download/v0.1.1/',
+  version: '0.1.3',
+  base: 'https://github.com/magnus530/mailbun/releases/download/v0.1.3/',
   assets: {
-    win:   'Mailbun-Setup-0.1.1.exe',
-    mac:   'Mailbun-0.1.1-arm64.dmg',
-    linux: 'Mailbun-0.1.1.AppImage'
+    win:   'Mailbun-Setup-0.1.3.exe',
+    mac:   'Mailbun-0.1.3-arm64.dmg',
+    linux: 'Mailbun-0.1.3.AppImage'
   }
 };
 
